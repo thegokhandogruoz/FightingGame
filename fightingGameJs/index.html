@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fighting Game</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="title">The Fighting Game</div>
+    <br>
+
+    <div class="menu">
+        <div class="p1">
+            <img
+            id="p1Choices"
+            src="https://i.gifer.com/tGR.gif"
+            />
+            <button
+            onclick="player1.strike(player1, player2, player1.attackDmg)"
+            id="attack"
+            >ATTACK
+            </button>
+            <button
+            onclick="player1.heal(player1)"
+            id="heal"
+            >HEAL
+            </button>
+            <div id="p1Health">100</div>
+        </div>
+            <button id="play">RUN SIMULATION</button>
+        <div class="p2">
+            <img
+            id="p2Choices"
+            src="https://i.gifer.com/Z6W4.gif"
+            />
+            <button
+            onclick="player2.strike(player2, player1, player2.attackDmg)"
+            id="attack"
+            >ATTACK
+            </button>
+            <button
+            onclick="player2.heal(player2)"
+            id="heal"
+            >HEAL
+            </button>
+            <div id="p2Health">100</div>
+        </div>
+    </div>
+
+    <div class="resultContainer">
+        <div id="result"></div>
+        <button onclick="game.reset(p1, p2)">RESET</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
